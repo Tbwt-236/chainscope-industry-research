@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-10-09T08:15:20.035Z",
+  "mode": "continuous browser screenshots at actual timestamps; no synthetic UI frames",
+  "duration": 72.751,
+  "stages": [
+    {
+      "start": 0,
+      "caption": "历史基线：六家公司、七条关系；浏览器规则演示。"
+    },
+    {
+      "start": 5.086,
+      "caption": "收入证据约 1,180 万美元来自产线安装和技术转移，不能理解为电芯销量。"
+    },
+    {
+      "start": 13.489,
+      "caption": "跨市场对照：同一产业方向仍需解释技术路径和商业模式的差异。"
+    },
+    {
+      "start": 21.772,
+      "caption": "外部变化是情景假设：传导路径保留成立条件与反向机制。"
+    },
+    {
+      "start": 30.132,
+      "caption": "真实更新样本：QuantumScape 2025 年报，发布日期 2026-02-25。"
+    },
+    {
+      "start": 38.45,
+      "caption": "表单校验后进入待审区；导入本身不会改变等级。"
+    },
+    {
+      "start": 44.813,
+      "caption": "人工核对原文、主体、技术口径与时间后确认复核。"
+    },
+    {
+      "start": 51.845,
+      "caption": "复核后仍遵守旧截止日期；2026 年材料不会进入 2025 年快照。"
+    },
+    {
+      "start": 57.149,
+      "caption": "将证据截止设为 2026-02-25，重新核验并保存新快照。"
+    },
+    {
+      "start": 64.166,
+      "caption": "版本对照显示新增年报来源，等级保持 B；研发进展不能替代收入披露。"
+    }
+  ],
+  "error": null,
+  "frame_count": 138,
+  "capture_manifest_sha256": "ea008eeae66fc94fcc5f3d2f3e94b4805350065d9b58dc4b3b5d3d530655aa00",
+  "video_sha256": "2d77b3bffa6e4f2c20984de1863f51bddd97e0f088bcd3106b032cabea76fb7d",
+  "file_size_bytes": 822063
+}

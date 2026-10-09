@@ -1,0 +1,67 @@
+{
+  "document": "spec_task1_industry_chain.md",
+  "diagram": "docs/architecture.mmd",
+  "chinese_character_count": 3232,
+  "character_limit_passed": false,
+  "diagram_structure_passed": true,
+  "checks": {
+    "data_chunking": {
+      "passed": false,
+      "missing_patterns": [
+        "分块|事件块"
+      ]
+    },
+    "hybrid_retrieval": {
+      "passed": false,
+      "missing_patterns": [
+        "BGE|Cross-Encoder"
+      ]
+    },
+    "workflow": {
+      "passed": false,
+      "missing_patterns": [
+        "Supervisor",
+        "重试|retry"
+      ]
+    },
+    "batch_sharding": {
+      "passed": false,
+      "missing_patterns": [
+        "HS",
+        "国家|country|reporter",
+        "分片|shard"
+      ]
+    },
+    "hot_cold": {
+      "passed": false,
+      "missing_patterns": [
+        "冷层|cold",
+        "对象存储|Object Storage|Parquet"
+      ]
+    },
+    "entity_resolution": {
+      "passed": false,
+      "missing_patterns": [
+        "注册号|域名|blocking"
+      ]
+    },
+    "claim_guard": {
+      "passed": false,
+      "missing_patterns": [
+        "复算|recompute"
+      ]
+    },
+    "evaluation": {
+      "passed": false,
+      "missing_patterns": [
+        "Precision@20",
+        "Recall@"
+      ]
+    },
+    "assumptions": {
+      "passed": true,
+      "missing_patterns": []
+    }
+  },
+  "passed": false
+}

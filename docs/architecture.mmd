@@ -1,0 +1,19 @@
+flowchart TD
+    UI[Web: industry / cutoff / route] --> API[FastAPI request validation]
+    API --> Provider[ReviewedDatasetProvider or configured bridge]
+    Provider --> IntentParser
+    IntentParser --> IndustryStructurer
+    IndustryStructurer --> CompanyLocatorEvidenceGrader
+    CompanyLocatorEvidenceGrader --> CrossMarketComparator
+    CrossMarketComparator --> TransmissionTracer
+    TransmissionTracer --> ReportGate
+    ReportGate --> Snapshots[(SQL snapshots: SQLite / PostgreSQL)]
+    ReportGate --> Result[Report / SSE]
+    Result --> UI
+    Sources[Official filings and company materials] --> Import[Schema validation: unreviewed]
+    Import --> Review[Authenticated human review]
+    Review --> Provider
+    ReportGate -. optional ID selection .-> LLM[Compatible model endpoint]
+    LLM -. allowlisted IDs only .-> ReportGate
+    Provider -. unavailable .-> Error503[503: no fabricated fallback]
+    CompanyLocatorEvidenceGrader -. missing / tampered / future .-> Missing[M: no financial number]

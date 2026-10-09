@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://chainscope:${POSTGRES_PASSWORD:-local-demo-password}@db:5432/chainscope
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+    depends_on:
+      db: {condition: service_healthy}
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: chainscope
+      POSTGRES_USER: chainscope
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-demo-password}
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chainscope"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  pgdata:
